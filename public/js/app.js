@@ -4,7 +4,7 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
 weatherForm.addEventListener('submit', (e)=> {
-	// Prevent default flash the browser
+	//Prevent default flash the browser
 	e.preventDefault()
 	const location = search.value
 
@@ -16,9 +16,8 @@ weatherForm.addEventListener('submit', (e)=> {
 			if(data.err) {
 				messageOne.textContent = data.err
 			} else {
-				messageOne.textContent = data.forecast
-				messageTwo.textContnet = data.location
-				console.log(data.forecast)
+                messageOne.textContent = data.location
+                messageTwo.textContent = data.forecast
 			}
 		})
 	})
